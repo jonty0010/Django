@@ -29,16 +29,6 @@ jobs:
     - name: Run Django Migrations
       run: |
         python manage.py migrate
-    - name: Commit Changes to Git Repository
-      run: |
-        # Commit changes to the Git repository
-        git config --global user.name "Viraj Khokhariya"
-        git config --global user.email "vgkhokhariya@gmail.com"
-        git add .
-        git commit -m "Automated Commit by GitHub Actions"
-    - name: Push Changes to Git Repository
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: main
+        python manage.py runserver
+
 
