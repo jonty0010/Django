@@ -8,7 +8,7 @@ on:
 
 permissions:
   contents: read
-  repository_dispatch: write
+  repository-projects: write
 
 jobs:
   build:
